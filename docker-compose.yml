@@ -7,6 +7,7 @@ services:
             dockerfile: ./Dockerfile
         image: deluge
         command: deluged -d -c /config
+        network_mode: deluge:openvpn-client
         ports:
             - 58846:58846
             - 6881
