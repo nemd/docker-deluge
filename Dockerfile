@@ -9,5 +9,3 @@ RUN apk add --update-cache deluge@testing boost-python@edge boost-system@edge li
 RUN pip install packaging incremental constantly automat service_identity
 
 VOLUME /config /downloads
-
-EXPOSE 58846 6881 6891
