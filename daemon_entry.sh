@@ -1,8 +1,7 @@
 #!/bin/ash
 
-echo "start daemon to create configs and kill it after 3 second"
+echo "start daemon to create configs and kill it immediately"
 deluged -d -c /config
-sleep 3
 killall deluged
 
 echo "create initial user"
