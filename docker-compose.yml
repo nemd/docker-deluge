@@ -6,7 +6,7 @@ services:
             context: .
             dockerfile: ./Dockerfile
         image: deluge
-        command: daemon-entry.sh
+        command: /daemon-entry.sh
         network_mode: deluge:openvpn-client
         ports:
             - 58846:58846
