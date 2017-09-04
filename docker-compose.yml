@@ -9,7 +9,6 @@ services:
         env_file:
             - .env
         command: /daemon_entry.sh
-        network_mode: deluge:openvpn-client
         ports:
             - 58846:58846
             - 6881
