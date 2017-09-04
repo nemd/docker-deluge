@@ -10,4 +10,7 @@ RUN pip install packaging incremental constantly automat service_identity
 
 VOLUME /config /downloads
 
+ADD *_entry.sh /
+RUN chmod +x /*_entry.sh
+
 EXPOSE 58846
