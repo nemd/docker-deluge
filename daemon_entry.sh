@@ -5,7 +5,7 @@ deluged -d -c /config
 killall deluged
 
 echo "create initial user"
-echo "$deluser:$delpass:$lvl" >> /config/deluge/auth
+echo "$deluser:$delpass:$lvl" >> /config/auth
 
 echo "enable reamote access"
 deluge-console "config -s allow_remote True"
