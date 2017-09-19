@@ -20,7 +20,6 @@ RUN chmod +x /etc/sv/*/run
 RUN ln -s /etc/sv/deluge_daemon /etc/service/deluge_daemon &&\
 	ln -s /etc/sv/deluge_web /etc/service/deluge_web
 
-ADD entrypoint.sh /
-RUN chmod +x /entrypoint.sh
+EXPOSE 80
 
 ENTRYPOINT ["/sbin/runsvdir", "/etc/service"]
