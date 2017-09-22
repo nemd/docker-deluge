@@ -1,10 +1,20 @@
 version: '3'
 
 services:
-    deluge:
-        build:
-            context: .
-            dockerfile: ./Dockerfile
-        image: deluge
-        ports:
-            - 80:80
+  deluge:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    image: deluge
+    ports:
+      - 80:80
+    volume:
+      - type: volume
+        source: config
+        target: /config
+      - type: bind
+        source: /var/downloads
+        target: /downloads
+
+volumes:
+	config:
